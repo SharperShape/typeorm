@@ -49,8 +49,8 @@ export class QueryCommand implements yargs.CommandModule {
 
             // create a query runner and execute query using it
             queryRunner = connection.createQueryRunner();
-            console.log(chalk.green("Running query: ") + PlatformTools.highlightSql(args._[1]));
-            const queryResult = await queryRunner.query(args._[1]);
+            console.log(chalk.green("Running query: ") + PlatformTools.highlightSql(String(args._[1])));
+            const queryResult = await queryRunner.query(String(args._[1]));
             console.log(chalk.green("Query has been executed. Result: "));
             console.log(PlatformTools.highlightJson(JSON.stringify(queryResult, undefined, 2)));
 
