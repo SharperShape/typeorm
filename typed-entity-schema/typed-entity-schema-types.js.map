@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/typed-entity-schema/typed-entity-schema-types.ts"],"names":[],"mappings":"","file":"typed-entity-schema-types.js","sourcesContent":["/**\n * Used to map missing entity schema data.\n */\nexport type MappedEntitySchemaProperty = {\n    model: string\n    property: string\n    target: string\n};\n"],"sourceRoot":".."}
